@@ -1,0 +1,15 @@
+.tabel {
+    &__grid {
+        &__row {
+
+        }
+
+        &__cell {
+            font-size: 12px;
+
+            &_weekend {
+                background-color: #b0beff;
+            }
+        }
+    }
+}

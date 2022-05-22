@@ -1,0 +1,8 @@
+query getToken($password: String!) {
+    getToken(grantType: "password", userName: $password, password: "1") {
+        userId
+        userName
+        permissions
+        accessToken
+    }
+}

@@ -1,0 +1,64 @@
+{
+  "services": [
+    {
+      "id": "1",
+      "code": "74060073",
+      "name": "Определение антител класса G (IgG) к SARS coronavirus в сыворотке крови методом иммунохемилюминесценции",
+      "analyzerTests": []
+    },
+    {
+      "id": "2",
+      "code": "74060075",
+      "name": "Антитела IgG к SARS coronavirus, обнаружение в сыворотке крови методом иммуноферментного анализа",
+      "analyzerTests": []
+    },
+    {
+      "id": "3",
+      "code": "74060076",
+      "name": "Антитела IgM к SARS coronavirus, обнаружение в сыворотке крови методом иммуноферментного анализа",
+      "analyzerTests": []
+    },
+    {
+      "id": "4",
+      "code": "74060077",
+      "name": "Определение антигена SARS-CoV-2 (COVID-19 Ag) иммунохроматографическим методом в мазке из носоглотки (экспресс-тест)",
+      "analyzerTests": []
+    },
+    {
+      "id": "5",
+      "code": "74060078",
+      "name": "Определение антигена SARS-CoV-2 (COVID-19 Ag) иммунохроматографическим методом в мазке из носоглотки (экспресс-тест) (Элиста, Черкесск)",
+      "analyzerTests": []
+    },
+    {
+      "id": "6",
+      "code": "74060085",
+      "name": "Определение антител класса G (IgG) к SARS coronavirus в сыворотке крови методом иммуноферментного анализа (количественно)",
+      "analyzerTests": []
+    },
+    {
+      "id": "7",
+      "code": "74092007",
+      "name": "Антитела IgM к SARS coronavirus, обнаружение в сыворотке крови методом иммуноферментного анализа",
+      "analyzerTests": []
+    },
+    {
+      "id": "8",
+      "code": "74092017",
+      "name": "Антитела IgM к SARS coronavirus, обнаружение в сыворотке крови методом иммуноферментного анализа",
+      "analyzerTests": []
+    }
+  ],
+  "analyzer-tests": [
+    { "id": "1", "name": "COVID_IgG_FOTO", "analyzerName": "lazurite", "serviceId": "2" },
+    { "id": "2", "name": "'Covid IgG" , "analyzerName": "lazurite", "serviceId": 2 },
+    { "id": "3", "name": "SarsCoV2_IgG_Best", "analyzerName": "multiscan", "serviceId": "2" },
+    { "id": "4", "name": "COV2G", "analyzerName": "DxI", "serviceId": "1" },
+    { "id": "5", "name": "'Covid IgMB", "analyzerName": "lazurite", " serviceId": 3 },
+    { "id": "6", "name": "'SARS-CoV2-IgM_Best", "analyzerName": "multiscan", "serviceId": 3 },
+    { "id": "7", "name": "SARS_IgM_Vektor", "analyzerName": "zenyth", "serviceId": "3" },
+    { "id": "8", "name": "'Covid IgG_KOL", "analyzerName": "lazurite","serviceId": "6" },
+    { "id": "9", "name": "SARS_IgG_Vektor_KOLICHESTVENNO", "analyzerName": "zenyth", "serviceId": "6" },
+    { "id": "10", "name": "SARS_IgG_Vektor_êîëè÷åñòâåííî", "analyzerName": "multiscan", "serviceId": 6 }
+  ]
+}

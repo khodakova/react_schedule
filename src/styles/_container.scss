@@ -1,0 +1,74 @@
+@mixin min($bp, $max: 'null', $device: 'screen') {
+    @if $max == 'null' {
+        @media only #{$device} and (min-width: #{$bp}) {
+            @content;
+        }
+    } @else {
+        @media only #{$device} and (min-width: #{$bp}) and (max-width: #{$max}) {
+            @content;
+        }
+    }
+}
+
+@function bp($bp) {
+    @return map-get($breakpoints, $bp);
+}
+
+$breakpoints: (
+        na: 0px,
+        xs: $screenXS,
+    // Smartphone
+        sm: $screenSM,
+    // Tablets
+        md: $screenMD,
+    // Tablets Landscape and small desktops
+        lg: $screenLG,
+    // Desktops
+        xl: $screenXL,
+    // Large Desktop
+);
+
+@function container($container-size, $true-val: false) {
+    @return map-get($container-sizes, $container-size);
+}
+
+$container-sizes: (
+        sm: map-get($breakpoints, sm),
+        md: map-get($breakpoints, md) - 100px,
+        lg: map-get($breakpoints, lg) - 180px,
+        xl: map-get($breakpoints, xl) - 200px,
+);
+
+.container {
+    padding-right: 1rem;
+    padding-left: 1rem;
+
+    &:not(.is-fluid) {
+        margin: 0 auto;
+
+        @each $bp, $container-size in $container-sizes {
+            @include min(#{bp(#{$bp})}) {
+                width: 100%;
+                min-width: container(#{$bp});
+                max-width: container(#{$bp}) + 100px;
+            }
+        }
+    }
+}
+
+@each $bp, $container-size in $container-sizes {
+    .container-#{$bp} {
+        margin: 0 auto;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        width: 100%;
+
+        $i: index($container-sizes, $bp $container-size);
+
+        @for $j from $i through length($container-sizes) {
+            @include min(#{bp(nth(nth($container-sizes, $j), 1))}) {
+                min-width: container(#{nth(nth($container-sizes, $j), 1)});
+            }
+        }
+    }
+}

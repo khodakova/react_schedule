@@ -1,0 +1,13 @@
+.time-range {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    //align-items: center;
+    justify-content: space-around;
+    &__item {
+        input {
+            width: 100%;
+            padding: 3px 1px;
+        }
+    }
+}

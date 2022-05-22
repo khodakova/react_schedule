@@ -1,0 +1,7 @@
+.date-picker {
+  display: flex;
+  &_row {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

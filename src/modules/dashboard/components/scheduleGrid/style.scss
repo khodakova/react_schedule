@@ -1,0 +1,17 @@
+.tabel {
+    &__grid {
+        height: 85vh;
+        &__row {
+
+        }
+
+        &__cell {
+            font-size: 12px;
+            white-space: pre-line !important;
+
+            &_weekend {
+                background-color: #b0beff;
+            }
+        }
+    }
+}
