@@ -5,6 +5,7 @@ import {IDateCondition, IDay, IDays, ITabelRow} from '@src/types';
 import TimeRangePicker from '@components/timeRangePicker';
 import React from 'react';
 import {isHoliday} from '@src/helpers/holidays';
+import DayEditCell from '@components/dayEditCell';
 
 /**
  * Получение массива с днями в зависимости от месяца и года
@@ -27,7 +28,6 @@ export const getDays = (month: number, year: number): IDay[] => {
         };
         days.push(item);
     }
-    // console.log(days)
     return days;
 };
 
@@ -77,7 +77,7 @@ export const getHeader = (dateCondition: IDateCondition) => {
         };
         item.renderEditCell = (params) => {
             const {field, row} = params;
-            return <TimeRangePicker timeRange={ row[field] }/>;
+            return <DayEditCell timeRange={row[field]}/>;
         };
     });
     

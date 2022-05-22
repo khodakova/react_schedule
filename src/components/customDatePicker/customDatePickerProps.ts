@@ -1,5 +1,3 @@
-import {TestSystem} from '@src/generated/types';
-
 export interface CustomDatePickerProps {
     /**
      * Название поля
@@ -8,7 +6,7 @@ export interface CustomDatePickerProps {
     /**
      * Значение поля
      */
-    value: string | number | null | undefined;
+    value: Date | null;
     /**
      * Флаг о возможности указания поля пустым
      */
@@ -24,11 +22,11 @@ export interface CustomDatePickerProps {
     /**
      * Название поля в объекте
      */
-    field: keyof TestSystem;
+    field?: any;
     /**
      * Имя поля для формика (необходимо для валидации)
      */
-    name: string;
+    name?: string;
 
     /**
      * Функция изменения значения даты

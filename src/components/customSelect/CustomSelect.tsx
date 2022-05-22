@@ -4,8 +4,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Select, {SelectChangeEvent} from '@mui/material/Select';
 import React, {useState} from 'react';
-
-import {ISelectMenuItem} from '@src/@types';
+import {ISelectMenuItem} from '@src/types';
 
 interface CustomSelectProps {
     menuItems: ISelectMenuItem[];

@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import CustomListItem from '@components/customListItem/CustomListItem';
 import {Box, TextField} from '@mui/material';
 import CustomButton from '@components/UI/CustomButton';
 import AddIcon from '@mui/icons-material/Add';
@@ -42,9 +41,9 @@ const DaysSettings: React.FC<DaysSettingsProps> = ({month}) => {
                     <Box sx={ {display: 'flex', flexDirection: 'column', paddingTop: '1rem'} }>
                         {
                             holidays.map(item =>
-                                <CustomListItem key={ item.day }>
+                                <div key={ item.day }>
                                     { item.day } - { item.comment }
-                                </CustomListItem>,
+                                </div>,
                             )
                         }
                     </Box>

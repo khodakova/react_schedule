@@ -11,7 +11,6 @@ interface TabelGridProps {
 const ScheduleGrid: React.FC<TabelGridProps> = ({dateCondition}) => {
     const [header, setHeader] = useState(getHeader(dateCondition));
     const {holidays} = useHolidaysContext();
-    // const header = getHeader(dateCondition);
     const [schedule, setSchedule] = useState<Array<ITabelRow>>();
     
     useEffect(() => {
@@ -20,7 +19,6 @@ const ScheduleGrid: React.FC<TabelGridProps> = ({dateCondition}) => {
     }, [dateCondition.month, holidays]);
     
     useEffect(() => {
-        // console.log(getHeader(dateCondition));
         setHeader(getHeader(dateCondition));
     }, [holidays]);
     
