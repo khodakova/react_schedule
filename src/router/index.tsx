@@ -4,8 +4,8 @@ import {lazy} from 'react';
 const Login = lazy(() => import('@src/modules/login'));
 const Dashboard = lazy(() => import('@src/modules/dashboard'));
 const Dashboard2 = lazy(() => import('@src/modules/dashboard2'));
-const Dashboard3 = lazy(() => import('@src/modules/dashboard3'));
-const Dashboard4 = lazy(() => import('@src/modules/dashboard4'));
+// const Dashboard3 = lazy(() => import('@src/modules/dashboard3'));
+// const Dashboard4 = lazy(() => import('@src/modules/dashboard4'));
 
 export interface IRoute {
     path: string;

@@ -96,7 +96,7 @@ export const getHeader = (dateCondition: IDateCondition) => {
 };
 
 export const getEmplDays = (month: number, year: number) => {
-    const obj: IDays = {};
+    const obj: Partial<IDays> = {};
     getDays(month, year).map(item => {
             if ( item.isSunday || item.isSaturday || item.isHoliday ) {
                 obj[`day_${ +item.num + 1 }` as keyof IDays] = null;
@@ -108,7 +108,6 @@ export const getEmplDays = (month: number, year: number) => {
             }
         },
     );
-    // console.log(obj);
     return obj;
 };
 
