@@ -22,7 +22,6 @@ export const setLastRoute = (lastRoute?: string) =>
 export const getLastRoute = (): string | null => getItem(LAST_ROUTE_NAME);
 export const deleteLastRoute = () => deleteItem(LAST_ROUTE_NAME);
 
-// export const saveUser = (user?: User) => saveItem(USER, JSON.stringify(user));
 export const saveUser = (user?: string | null) => saveItem(USER, user);
 export const getUser = (): string | null => getItem(USER);
 export const deleteUser = () => deleteItem(USER);
